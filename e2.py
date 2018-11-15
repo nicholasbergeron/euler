@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 
+S = []
+
 def fib(n):
-	if n in [1,2]:
+        if n in [1,2]:
  		return n
  	return fib(n-1) + fib(n-2)
 
-S = []
-
 for i in range(1,1000):
-	if fib(i) >= 4000000:
+        x = fib(i)
+	if x >= 4000000:
 		break
 
-	if fib(i) % 2 == 0:
-		S.append(fib(i))
+	if x % 2 == 0:
+		S.append(x)
 
 print(sum(S))
